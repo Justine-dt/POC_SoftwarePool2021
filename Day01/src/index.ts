@@ -1,9 +1,6 @@
-/*
-** EPITECH PROJECT, 2020
-** POC_SoftwarePool2021
-** File description:
-** index.ts
-*/
 
 let toto = "Hello World!";
 console.log(toto);
+
+import superComputer,{Callback, callback} from "./superComputer";
+superComputer(25, "-", 8, callback);
