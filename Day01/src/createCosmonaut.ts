@@ -1,5 +1,5 @@
 
-interface Cosmonaut {
+export interface Cosmonaut {
     name: string;
     mission: string;
     country: string;
@@ -11,3 +11,4 @@ function createCosmonaut(Name: string, Mission: string, Country: string): Cosmon
     titi.country = Country;
     return titi;
 }
+export default createCosmonaut;
