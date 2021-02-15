@@ -15,20 +15,23 @@ export function callback(err: Error | null, result: any): Error | number {
 
 function superComputer(nb1: number, operation: string, nb2: number, callback: Callback) {
     if (operation == "-") {
-        callback(null, nb1 - nb2);
+        return callback(null, nb1 - nb2);
     }
     if (operation == "/") {
-        callback(null, nb1 / nb2);
+        return callback(null, nb1 / nb2);
+    }
+    if (operation == "+") {
+        return callback(null, nb1 + nb2);
     }
     if (operation == null) {
-        callback(new Error("bad operation"));
+        return callback(new Error("bad operation"));
     }
     if (operation == "*") {
-        callback(null, nb1 * nb2);
+        return callback(null, nb1 * nb2);
     }
     if (operation == "/") {
         if (nb2 == 0 && nb1 == 0) {
-            callback(new Error("Division 0"));
+            return callback(new Error("Division 0"));
         }
     }
 } 
